@@ -1,0 +1,29 @@
+# Run time analysis
+This file explains the n time analysis (Worst Case Big O Notation) for each solution they produced. 
+Analysis will leave apart the load of the current files, and focus on the __algorithm execution__.
+[Python time complexity](https://wiki.python.org/moin/TimeComplexity), information has been used as
+a reference.
+
+## Task0
+This takes runs in O(1), due to the fact that access on a Python array has O(1), and there are
+two lines executing accesses to lists
+
+## Task1
+This takes runs in O(n), due to the fact that we access sequentially both files for two of their
+columns, i.e. 2*2*O(n) -> O(n)
+
+## Task2
+This takes runs in O(n). That is justiified as the code contains 2 times n iterations with some O(1)
+operations in it. Hence 2*x*O(n) -> O(n). (Here x is a constant)
+
+## Task3
+This takes runs in O(n log n). Now, that is justified as we traverse the 'calls' hence resulting complexity
+to O(n) and then sorting the list resulting the complexity to O(n*log(n)).
+Hence O(n)+O(n*log(n)) -> O(n*log(n))
+
+## Task4
+This takes runs in O(n log n), due to the fact that we find list sorting operations, which have
+a time complexity of O(n log n). In the code we find many operations that are O(1) as
+the different elements are modified. Additionally there are several full scans thorough the lists,
+which have O(n) time complexity. Though they all add up to some value of `x * O(n) + `O(n log n)`,
+we end up simplifying them into `O(n log n)`.
